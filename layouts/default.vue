@@ -1,7 +1,7 @@
 <template>
-  <header>
-    <nav class="flex justify-between">
-      <div>
+  <header class="bg-primary bg-opacity-[.95]">
+    <nav class="container flex justify-between py-3 text-white">
+      <div class="text-2xl font-medium">
         <NuxtLink to="/">Security</NuxtLink>
       </div>
 
