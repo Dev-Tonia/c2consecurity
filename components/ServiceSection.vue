@@ -4,10 +4,16 @@
       <h2 class="text-3xl font-bold py-5">Our Services</h2>
       <div class="grid grid-cols-3 gap-4">
         <div class="h-48 mb-5" v-for="service in services" :key="service.title">
-          <img class="w-full h-full" :src="service.img" :alt="service.title" />
-          <h4 class="font-bold text-xl text-center">
-            {{ service.title }}
-          </h4>
+          <NuxtLink to="/service">
+            <img
+              class="w-full h-full"
+              :src="service.img"
+              :alt="service.title"
+            />
+            <h4 class="font-bold text-xl text-center">
+              {{ service.title }}
+            </h4>
+          </NuxtLink>
         </div>
       </div>
     </div>
