@@ -1,8 +1,10 @@
 <template>
-  <HeroSection />
-  <AboutUs />
-  <ValueSection />
-  <ServiceSection />
+  <div>
+    <HeroSection />
+    <AboutUs />
+    <ValueSection />
+    <ServiceSection />
+  </div>
 </template>
 
 <script setup></script>
