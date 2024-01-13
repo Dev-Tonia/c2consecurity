@@ -1,8 +1,10 @@
 <template>
-  <section class="bg-primary text-white py-4">
+  <section class="bg-primary text-white pb-12 pt-16">
     <div class="container">
       <h2 class="text-3xl font-bold py-2">Get to know us</h2>
-      <p class="mt-3 mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
+      <p
+        class="mt-3 mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-justify"
+      >
         <span class="text-green-500 font-medium text-xl">
           C2construction Security Services Limited</span
         >
@@ -13,7 +15,9 @@
         service is reflected in the exceptional quality of our staff, all of
         whom hold approvals from the Security Industry Authority (SIA).
       </p>
-      <p class="mt-3 mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
+      <p
+        class="mt-3 mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-justify"
+      >
         Situated in the central hub of Surrey, our main office serves as the
         cornerstone of
         <span class="text-green-500 font-medium text-xl">

@@ -24,12 +24,74 @@
   <main>
     <slot />
   </main>
+  <footer>
+    <div class="bg-[#221F20] text-white pt-10 pb-9">
+      <div class="container">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="col-span-2">
+            <h1 class="font-bold text-2xl">
+              c2constructionsecurityservicesltd
+            </h1>
+            <p class="text-xs md:text-sm">
+              We offers a diverse range of customized security services that go
+              beyond mere protection, aiming to instill peace of mind and
+              assurance in various sectors including residential, commercial,
+              construction, and public domains.
+            </p>
+          </div>
+          <div>
+            <h1 class="font-bold text-2xl">Services</h1>
+            <ul>
+              <li class="text-xs">
+                <NuxtLink to="service"
+                  >SECURITY GUARDING - ALL SECTORS</NuxtLink
+                >
+              </li>
+              <li class="text-xs">
+                <NuxtLink to="service">ID CARD SYSTEMS</NuxtLink>
+              </li>
+              <li class="text-xs">
+                <NuxtLink to="service"> KEY HOLDING SERVICES </NuxtLink>
+              </li>
+              <li class="text-xs">
+                <NuxtLink to="service"> EVENT MANAGEMENT </NuxtLink>
+              </li>
+              <li class="text-xs">
+                <NuxtLink to="service">
+                  IP & ANALOGUE CCTV INSTALLATION
+                </NuxtLink>
+              </li>
+              <li class="text-xs">
+                <NuxtLink to="service"> BIO METRIC ACCESS CONTROL </NuxtLink>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1 class="font-bold text-2xl">Contact Details</h1>
+            <h5 class="font-bold">Head Office</h5>
+            <p class="text-xs">20-22 Wenlock Road London N1 7GU</p>
+            <div class="text-xs">
+              <span class="font-bold">Tel:</span>020 7117 2469
+            </div>
+            <div class="text-xs">
+              <span class="font-bold">Mob:</span>
+              07949 898649
+            </div>
+            <div class="text-xs">
+              <span class="font-bold">Email:</span>
+              info@prolinksecurity.co.uk
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script setup></script>
 
 <style scoped>
-li {
+nav li {
   @apply px-2 text-2xl font-medium;
 }
 </style>

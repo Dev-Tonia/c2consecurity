@@ -1,7 +1,7 @@
 <template>
-  <section class="text-gray-900 py-4">
+  <section class="text-gray-900 pb-12 pt-16">
     <div class="container">
-      <h2 class="text-3xl font-bold py-2">What Makes us Different</h2>
+      <h2 class="text-3xl font-bold pb-5 pt-6">What Makes us Different</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
         <ValueSectionTile
           v-for="value in values"
