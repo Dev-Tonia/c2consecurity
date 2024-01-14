@@ -3,13 +3,15 @@
     <div class="container">
       <h2 class="text-3xl font-bold py-5">Our Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="h-48 mb-5" v-for="service in services" :key="service.title">
+        <div v-for="service in services" :key="service.title">
           <NuxtLink to="/service">
-            <img
-              class="w-full h-full"
-              :src="service.img"
-              :alt="service.title"
-            />
+            <div class="h-48 mb-5">
+              <img
+                class="w-full h-full"
+                :src="service.img"
+                :alt="service.title"
+              />
+            </div>
             <h4 class="font-bold text-xl text-center">
               {{ service.title }}
             </h4>
