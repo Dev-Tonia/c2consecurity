@@ -1,7 +1,7 @@
 <template>
   <div class="bg-emerald-50/40 py-10 px-7 rounded-md">
     <h3
-      class="font-medium text-center text-lg md:text-lg lg:text-xl border-b-2 border-green-500 pb-3"
+      class="font-medium text-center text-lg lg:text-xl border-b-2 border-green-500 pb-3"
     >
       {{ value.title }}
     </h3>

@@ -1,24 +1,16 @@
 <template>
   <header class="bg-primary bg-opacity-[.95]">
-    <nav class="container flex justify-between py-3 text-white">
-      <div class="text-2xl font-medium">
-        <NuxtLink to="/">Security</NuxtLink>
+    <nav class="container py-3 text-white">
+      <div class="flex justify-between">
+        <div class="text-2xl font-medium">
+          <NuxtLink to="/">Security</NuxtLink>
+        </div>
+        <div class="md:hidden text-2xl text-white" @click="toggleNavbar">
+          <i class="ri-menu-fill"></i>
+        </div>
+        <DesktopNavitem />
       </div>
-
-      <ul class="flex justify-between items-center">
-        <li>
-          <NuxtLink to="/">Home</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/service">Service</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/jobs">Jobs</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/contact-us">Contact us</NuxtLink>
-        </li>
-      </ul>
+      <MobileNavItem v-if="isNavbarOpen" />
     </nav>
   </header>
   <main>
@@ -28,10 +20,8 @@
     <div class="bg-[#221F20] text-white pt-10 pb-9">
       <div class="container">
         <div class="grid grid-cols-4 gap-4">
-          <div class="col-span-2">
-            <h1 class="font-bold text-2xl mb-6">
-              c2constructionsecurityservicesltd
-            </h1>
+          <div class="col-span-4 md:col-span-2">
+            <h1 class="font-bold text-2xl mb-6">c2constructions</h1>
             <p class="text-xs md:text-sm">
               We offers a diverse range of customized security services that go
               beyond mere protection, aiming to instill peace of mind and
@@ -39,7 +29,7 @@
               construction, and public domains.
             </p>
           </div>
-          <div>
+          <div class="hidden md:block">
             <h1 class="font-bold text-2xl mb-6">Services</h1>
             <ul>
               <li class="text-xs mb-2">
@@ -66,7 +56,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="hidden md:block">
             <h1 class="font-bold text-2xl mb-6">Contact Details</h1>
             <div class="mb-2">
               <h5 class="font-bold">Head Office</h5>
@@ -90,10 +80,13 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+const isNavbarOpen = ref(false);
+provide("isNavbarOpen", isNavbarOpen);
 
-<style scoped>
-nav li {
-  @apply px-2 text-2xl font-medium;
+function toggleNavbar() {
+  isNavbarOpen.value = !isNavbarOpen.value;
 }
-</style>
+</script>
+
+<style scoped></style>
