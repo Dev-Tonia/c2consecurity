@@ -46,10 +46,18 @@ const submitForm = () => {
   } else {
     console.log(formData.email, formData.name, formData.password);
   }
-  formData.name = "";
   formData.email = "";
+  formData.firstName = "";
+  formData.lastName = "";
   formData.phoneNumber = "";
-  formData.confirmPassword = null;
+  formData.address1 = "";
+  formData.address2 = "";
+  formData.city = "";
+  formData.state = "";
+  formData.zipCode = "";
+  formData.country = "";
+  formData.qualifications = [];
+  formData.additionalInfo = "";
 };
 </script>
 
@@ -60,20 +68,15 @@ const submitForm = () => {
         @submit.prevent="submitForm"
         class="mx-auto mt-10 flex w-full flex-col rounded-lg p-8 shadow-2xl md:mt-0 md:w-5/6"
       >
-        <div class="mb-7 pt-5">
-          <h2 class="font-medium text-lg md:text-xl lg:text-2xl text-center">
-            APPLICATION FORM
-          </h2>
-          <p class="italic text-sm text-center text-green-500">
-            Come work with us
-          </p>
-        </div>
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold pb-10">
+          We're Here To Help!
+        </h2>
         <!-- Name input -->
         <!-- label,placeHolder,id,type,error -->
         <div class="flex gap-4">
           <CustomInput
             class="w-full"
-            v-model="formData.name"
+            v-model="formData.firstName"
             place-holder="Enter First Name"
             label="First Name"
             id="name"
@@ -82,7 +85,7 @@ const submitForm = () => {
           />
           <CustomInput
             class="w-full"
-            v-model="formData.name"
+            v-model="formData.lastName"
             place-holder="Enter Last Name"
             label="Last Name"
             id="name"
@@ -90,7 +93,6 @@ const submitForm = () => {
             :error="v$.lastName.$error"
           />
         </div>
-
         <!-- Email input -->
         <CustomInput
           v-model="formData.email"
@@ -100,7 +102,6 @@ const submitForm = () => {
           type="email"
           :error="v$.email.$error"
         />
-
         <!-- Phone input -->
         <CustomInput
           v-model="formData.phoneNumber"
@@ -159,7 +160,7 @@ const submitForm = () => {
             />
             <CustomInput
               class="w-full"
-              v-model="formData.state"
+              v-model="formData.country"
               place-holder="Country "
               label="Country"
               id="country "
