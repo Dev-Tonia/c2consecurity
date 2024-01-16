@@ -1,7 +1,7 @@
 <script setup>
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
-// const formData = ref(formInitial);
+
 const formData = reactive({
   email: "",
   firstName: "",
@@ -40,6 +40,7 @@ const v$ = useVuelidate(rules, formData);
 
 const submitForm = () => {
   v$.value.$validate();
+  console.log(v$.value.$validate());
   if (v$.value.$error) {
     console.log("error occurred");
     return;
@@ -58,6 +59,7 @@ const submitForm = () => {
   formData.country = "";
   formData.qualifications = [];
   formData.additionalInfo = "";
+  !v$.value.$error;
 };
 </script>
 

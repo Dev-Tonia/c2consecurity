@@ -39,6 +39,20 @@
           <ContactForm />
         </div>
       </div>
+      <!--  -->
+    </div>
+  </section>
+  <section>
+    <div class="google-map">
+      <iframe
+        src="https://maps.app.goo.gl/UQRRPeM8B7PS4ar36"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   </section>
 </template>

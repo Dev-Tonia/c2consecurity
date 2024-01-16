@@ -20,7 +20,7 @@ defineProps({
 
   error: {
     type: Boolean,
-    default: true,
+    default: false,
   },
 });
 </script>
@@ -32,7 +32,7 @@ defineProps({
     }}</label>
     <div class="relative">
       <textarea
-        :type="type"
+        rows="6"
         :id="id"
         :name="id"
         :placeholder="placeHolder"
