@@ -17,7 +17,7 @@
           </div>
           <div class="mb-2">
             <h5 class="font-bold md:text-lg">Head Office</h5>
-            <p class="">20-22 Wenlock Road London N1 7GU</p>
+            <p class="">3 Nassau path London SE2886RR</p>
           </div>
           <div class="mb-2">
             <h5 class="font-bold md:text-lg">Call Now!</h5>

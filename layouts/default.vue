@@ -60,7 +60,7 @@
             <h1 class="font-bold text-2xl mb-6">Contact Details</h1>
             <div class="mb-2">
               <h5 class="font-bold">Head Office</h5>
-              <p class="text-xs">20-22 Wenlock Road London N1 7GU</p>
+              <p class="text-xs">3 Nassau path London SE2886RR</p>
             </div>
             <div class="text-xs mb-2">
               <span class="font-bold">Tel:</span> 020 7117 2469
@@ -71,7 +71,14 @@
             </div>
             <div class="text-xs mb-2">
               <span class="font-bold">Email:</span>
-              info@prolinksecurity.co.uk
+              <a
+                href="mailto: 
+              Support@c2constructionsecurityservicesltd.com"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Support@c2constructionsecurityservicesltd.com
+              </a>
             </div>
           </div>
         </div>

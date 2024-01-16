@@ -231,6 +231,7 @@ const submitForm = () => {
           label="Additional Information "
           id="additionalInfo"
           :error="v$.additionalInfo.$error"
+          imageUrl="../assets/img/new-removebg-preview.png"
         />
         <button
           type="submit"

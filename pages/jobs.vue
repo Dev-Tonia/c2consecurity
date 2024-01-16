@@ -12,8 +12,17 @@
       </p>
       <p class="text-sm md:text-base lg:text-lg font-light">
         E-mail your CV to
-        <em class="font-medium">jobs@prolinksecurity.co.uk </em> or fill in the
-        enquiry form below.
+        <em class="font-medium"
+          ><a
+            href="mailto: 
+              Support@c2constructionsecurityservicesltd.com"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Support@c2constructionsecurityservicesltd.com
+          </a>
+        </em>
+        or fill in the enquiry form below.
       </p>
     </div>
   </section>
