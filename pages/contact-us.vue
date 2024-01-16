@@ -3,8 +3,8 @@
 
   <section class="py-10">
     <div class="container">
-      <div class="flex gap-4">
-        <div class="w-1/2">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="md:w-1/2">
           <div class="pb-12">
             <h2 class="text-xl md:text-2xl lg:text-3xl font-bold pb-10">
               Get In Touch With us
