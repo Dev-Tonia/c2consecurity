@@ -3,7 +3,7 @@
     <nav class="container py-3 text-white">
       <div class="flex justify-between">
         <div class="text-2xl font-medium">
-          <NuxtLink to="/">Security</NuxtLink>
+          <NuxtLink to="/">c2constructions</NuxtLink>
         </div>
         <div class="md:hidden text-2xl text-white" @click="toggleNavbar">
           <i class="ri-menu-fill"></i>
@@ -28,6 +28,18 @@
               assurance in various sectors including residential, commercial,
               construction, and public domains.
             </p>
+            <div>
+              <span class="font-bold"> Follow us on social: </span>
+              <a
+                href="https://x.com/c2construc26800?s=20"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <span class="inline-block ps-3">
+                  <i class="ri-twitter-x-fill text-2xl"></i>
+                </span>
+              </a>
+            </div>
           </div>
           <div class="hidden md:block">
             <h1 class="font-bold text-2xl mb-6">Services</h1>

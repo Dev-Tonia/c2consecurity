@@ -42,21 +42,30 @@
       <!--  -->
     </div>
   </section>
-  <section>
-    <div class="google-map">
-      <iframe
-        src="https://maps.app.goo.gl/UQRRPeM8B7PS4ar36"
-        width="100%"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+  <section class="pt-20 mt-8 pb-10 map">
+    <div class="container">
+      <h2 class="text-xl text-center md:text-2xl lg:text-3xl font-bold pb-10">
+        Get Direction
+      </h2>
+      <div class="google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2483.605999207396!2d0.1147063766197443!3d51.50209737181208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s3%20Nassau%20path%20London%20SE2886RR!5e0!3m2!1sen!2sng!4v1705436580333!5m2!1sen!2sng"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.map {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+</style>
