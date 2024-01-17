@@ -11,8 +11,6 @@
                 :src="service.img"
                 :alt="service.title"
               />
-
-              <img src="../assets/" alt="" />
             </div>
             <h4 class="font-bold text-xl text-center">
               {{ service.title }}
