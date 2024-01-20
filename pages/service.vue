@@ -1,6 +1,6 @@
 <template>
   <Banner title=" Our Services" />
-  <div class="container py-32">
+  <div class="wrapper py-32">
     <div
       class="md:grid grid-cols-5 gap-9 border-t-4 pt-5"
       v-for="service in services"

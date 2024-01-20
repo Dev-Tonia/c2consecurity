@@ -1,7 +1,7 @@
 <template>
   <Banner title="Jobs" />
   <section class="pt-10 pb-2">
-    <div class="container">
+    <div class="wrapper">
       <h1 class="text-lg md:xl lg:text-2xl font-medium pb-3">
         JOBS @ C2construction
       </h1>
@@ -27,7 +27,7 @@
     </div>
   </section>
   <section class="pb-16">
-    <div class="container">
+    <div class="wrapper">
       <JobsForm />
     </div>
   </section>

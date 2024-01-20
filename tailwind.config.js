@@ -13,6 +13,9 @@ export default {
       colors: {
         primary: "#0F172A",
       },
+      fontFamily: {
+        openPass: "'Overpass', sans-serif",
+      },
     },
   },
   plugins: [],

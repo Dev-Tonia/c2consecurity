@@ -1,6 +1,6 @@
 <template>
   <section class="bg-green-500/[0.05] text-gray-900 pb-16 pt-16">
-    <div class="container">
+    <div class="wrapper">
       <h2 class="text-3xl font-bold py-5">Our Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div v-for="service in services" :key="service.title">

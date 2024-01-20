@@ -2,7 +2,7 @@
   <Banner title="Contact Us" />
 
   <section class="py-10">
-    <div class="container">
+    <div class="wrapper">
       <div class="flex flex-col md:flex-row gap-4">
         <div class="md:w-1/2">
           <div class="pb-12">
@@ -29,7 +29,7 @@
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  (778) 386-3657</a
+                  +447948508175</a
                 >
               </span>
             </p>
@@ -43,7 +43,7 @@
     </div>
   </section>
   <section class="pt-20 mt-8 pb-10 map">
-    <div class="container">
+    <div class="wrapper">
       <h2 class="text-xl text-center md:text-2xl lg:text-3xl font-bold pb-10">
         Get Direction
       </h2>
