@@ -1,7 +1,9 @@
 <template>
   <section class="bg-primary text-white pb-12 pt-16">
     <div class="wrapper">
-      <h2 class="text-3xl font-bold py-2">Get to know us</h2>
+      <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold py-2">
+        Get to know us
+      </h2>
       <p
         class="mt-3 mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-justify"
       >

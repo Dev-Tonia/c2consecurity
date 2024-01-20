@@ -5,7 +5,9 @@
     <div
       class="absolute bg-black/60 top-0 bottom-0 right-0 left-0 flex items-center justify-center"
     >
-      <h2 class="text-white text-4xl font-bold">{{ title }}</h2>
+      <h2 class="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
+        {{ title }}
+      </h2>
     </div>
   </div>
 </template>
