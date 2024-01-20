@@ -1,8 +1,10 @@
 <template>
   <section
-    class="h-[70vh] bg-[url('~/assets/img/bg.jpg')] bg-no-repeat bg-[length:100%_100%] relative"
+    class="h-[50vh] lg:h-[70vh] bg-[url('~/assets/img/bg.jpg')] bg-no-repeat bg-[length:100%_100%] relative"
   >
-    <div class="absolute bg-black/50 top-0 bottom-0 right-0 left-0">
+    <div
+      class="absolute bg-black/50 top-0 bottom-0 right-0 left-0 flex items-center justify-center lg:block"
+    >
       <div class="wrapper">
         <div
           class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
