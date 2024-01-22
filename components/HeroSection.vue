@@ -1,6 +1,6 @@
 <template>
   <section
-    class="h-[50vh] lg:h-[70vh] bg-[url('~/assets/img/bg.jpg')] bg-no-repeat bg-[length:100%_100%] relative"
+    class="h-[60vh] lg:h-[70vh] bg-[url('~/assets/img/bg.jpg')] bg-no-repeat bg-[length:100%_100%] relative"
   >
     <div
       class="absolute bg-black/50 top-0 bottom-0 right-0 left-0 flex items-center justify-center lg:block"
@@ -40,4 +40,4 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
