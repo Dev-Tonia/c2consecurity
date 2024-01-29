@@ -16,8 +16,8 @@
   <main>
     <slot />
   </main>
-  <footer class="bg-[#221F20]">
-    <div class="text-white pt-10 pb-9">
+  <footer class="pt-10">
+    <div class="text-white pb-9 bg-[#221F20]">
       <div class="wrapper">
         <div class="md:grid grid-cols-4 gap-4">
           <div class="md:col-span-2">
@@ -103,6 +103,7 @@
         </div>
       </div>
     </div>
+    <div></div>
   </footer>
 </template>
 

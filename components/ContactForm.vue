@@ -6,7 +6,7 @@ const formData = reactive({
   email: "",
   firstName: "",
   lastName: "",
-
+  phoneNumber: "",
   additionalInfo: "",
 });
 const rules = computed(() => {
@@ -17,30 +17,39 @@ const rules = computed(() => {
     },
     firstName: { required },
     lastName: { required },
-
+    phoneNumber: { required },
     additionalInfo: { required },
   };
 });
 
 const v$ = useVuelidate(rules, formData);
+const { data, submitForm } = useFetchCustom();
 
-const submitForm = () => {
+const submit = async () => {
   v$.value.$validate();
   if (v$.value.$error) {
     console.log("error occurred");
     return;
   } else {
-    console.log(formData.email, formData.name, formData.password);
+    submitForm("contact", {
+      first_name: formData.firstName,
+      email: formData.email,
+      last_name: formData.lastName,
+      phone: formData.phoneNumber,
+      info: formData.additionalInfo,
+    });
+    console.log(data.value);
   }
-  formData.name = "";
+  formData.firstName = "";
+  formData.lastName = "";
   formData.email = "";
   formData.phoneNumber = "";
-  formData.confirmPassword = null;
+  formData.additionalInfo = "";
 };
 </script>
 <template>
   <form
-    @submit.prevent="submitForm"
+    @submit.prevent="submit"
     class="mx-auto mt-10 flex w-full flex-col rounded-lg p-8 shadow-2xl md:mt-0 md:w-11/12"
   >
     <div class="mb-7 pt-5">
@@ -53,7 +62,7 @@ const submitForm = () => {
     <div class="flex gap-4">
       <CustomInput
         class="w-full"
-        v-model="formData.name"
+        v-model="formData.firstName"
         place-holder="Enter First Name"
         label="First Name"
         id="name"
@@ -62,7 +71,7 @@ const submitForm = () => {
       />
       <CustomInput
         class="w-full"
-        v-model="formData.name"
+        v-model="formData.lastName"
         place-holder="Enter Last Name"
         label="Last Name"
         id="name"
@@ -80,6 +89,16 @@ const submitForm = () => {
       type="email"
       :error="v$.email.$error"
     />
+
+    <!-- Phone number input -->
+    <CustomInput
+      v-model="formData.phoneNumber"
+      place-holder="(123) 456 789"
+      label="Phone Number"
+      id="phoneNumber"
+      type="text"
+      :error="v$.phoneNumber.$error"
+    />
     <!-- textarea -->
     <CustomTextArea
       v-model="formData.additionalInfo"
@@ -95,4 +114,7 @@ const submitForm = () => {
       Submit
     </button>
   </form>
+  <!-- <div class="bg-green-500">
+    {{ data }}
+  </div> -->
 </template>

@@ -7,15 +7,21 @@ const formData = reactive({
   firstName: "",
   lastName: "",
   phoneNumber: "",
+  licenseType: "",
   address1: "",
   address2: "",
   city: "",
   state: "",
   zipCode: "",
   country: "",
+  firstAider: false,
+  cscsCard: false,
+  fireMarshall: false,
+  drivingLicense: false,
   qualifications: [],
   additionalInfo: "",
 });
+
 const rules = computed(() => {
   return {
     email: {
@@ -25,32 +31,63 @@ const rules = computed(() => {
     firstName: { required },
     lastName: { required },
     phoneNumber: { required },
+    licenseType: { required },
     address1: { required },
     address2: {},
     city: { required },
     state: { required },
     zipCode: { required },
     country: {},
-    qualifications: { required },
+
     additionalInfo: { required },
   };
 });
-
 const v$ = useVuelidate(rules, formData);
+const { data, submitForm } = useFetchCustom();
 
-const submitForm = () => {
+function capitalizeFirstLetter(value) {
+  return value.toString().charAt(0).toUpperCase() + value.toString().slice(1);
+}
+
+const submit = () => {
   v$.value.$validate();
-  console.log(v$.value.$validate());
   if (v$.value.$error) {
     console.log("error occurred");
     return;
   } else {
-    console.log(formData.email, formData.name, formData.password);
+    submitForm("services", {
+      firstName: formData.firstName,
+      email: formData.email,
+      lastName: formData.lastName,
+      phoneNumber: formData.phoneNumber,
+      licenseType: formData.licenseType,
+      qualifications: {
+        first_aider:
+          formData.firstAider.toString().charAt(0).toUpperCase() +
+          formData.firstAider.toString().slice(1),
+        cscs_card:
+          formData.cscsCard.toString().charAt(0).toUpperCase() +
+          formData.cscsCard.toString().slice(1),
+        Fire_Marshall:
+          formData.fireMarshall.toString().charAt(0).toUpperCase() +
+          formData.fireMarshall.toString().slice(1),
+        driving_license:
+          formData.drivingLicense.toString().charAt(0).toUpperCase() +
+          formData.drivingLicense.toString().slice(1),
+      },
+      state: formData.state,
+      city: formData.city,
+      country: formData.country,
+      address1: formData.address1,
+      zipCode: formData.zipCode,
+      additionalInfo: formData.additionalInfo,
+    });
   }
   formData.email = "";
   formData.firstName = "";
   formData.lastName = "";
   formData.phoneNumber = "";
+  formData.licenseType = "";
   formData.address1 = "";
   formData.address2 = "";
   formData.city = "";
@@ -59,7 +96,6 @@ const submitForm = () => {
   formData.country = "";
   formData.qualifications = [];
   formData.additionalInfo = "";
-  !v$.value.$error;
 };
 </script>
 
@@ -67,7 +103,7 @@ const submitForm = () => {
   <section class="mx-auto px-5 py-24 text-gray-900">
     <div class="">
       <form
-        @submit.prevent="submitForm"
+        @submit.prevent="submit"
         class="mx-auto mt-10 flex w-full flex-col rounded-lg p-8 shadow-2xl md:mt-0 md:w-5/6"
       >
         <h2 class="text-xl md:text-2xl lg:text-3xl font-bold pb-10">
@@ -113,6 +149,32 @@ const submitForm = () => {
           type="text"
           :error="v$.phoneNumber.$error"
         />
+
+        <!-- For the drop down -->
+        <div
+          class="relative mb-4"
+          :class="{ 'border-red-500 border': v$.licenseType.$error }"
+        >
+          <label for="license" class="text-sm leading-7 text-gray-400"
+            >SIA License Type</label
+          >
+          <div class="relative">
+            <select
+              v-model="formData.licenseType"
+              name="license"
+              id="license"
+              class="w-full rounded border border-gray-600 bg-transparent bg-opacity-20 py-1 px-3 text-base leading-8 text-gray-900 outline-none transition-colors duration-200 ease-in-out placeholder:text-gray-500 focus:border-blue-500 focus:bg-transparent focus:ring-2 focus:ring-transparent"
+            >
+              <option disabled value="">Select SIA License Type</option>
+              <option value="Security Guard">Security Guard</option>
+              <option value="Door Supervisor">Door Supervisor</option>
+              <option value="CCTV ">CCTV</option>
+              <option value="key holder">key holder</option>
+              <option value="CP ">CP</option>
+              <option value="Vehicle Immobilizer">Vehicle Immobilizer</option>
+            </select>
+          </div>
+        </div>
         <!-- Address Input -->
         <div>
           <CustomInput
@@ -171,17 +233,14 @@ const submitForm = () => {
             />
           </div>
         </div>
-        <div
-          class="mb-4"
-          :class="{ 'border-red-500 border': v$.qualifications.$error }"
-        >
+        <div class="mb-4">
           <h6 class="text-sm leading-7 text-gray-400">Qualifications</h6>
           <div>
             <input
               type="checkbox"
               id="firstAider"
               value="First Aider"
-              v-model="formData.qualifications"
+              v-model="formData.firstAider"
               class="accent-green-500"
             />
             <label class="inline-block text-gray-900 ps-2" for="firstAider"
@@ -193,7 +252,7 @@ const submitForm = () => {
               type="checkbox"
               id="CSCSCard"
               value="CSCS Card"
-              v-model="formData.qualifications"
+              v-model="formData.cscsCard"
               class="accent-green-500"
             />
             <label class="inline-block text-gray-900 ps-2" for="CSCSCard"
@@ -205,7 +264,7 @@ const submitForm = () => {
               type="checkbox"
               id="fireMarshall"
               value="Fire Marshall"
-              v-model="formData.qualifications"
+              v-model="formData.fireMarshall"
               class="accent-green-500"
             />
             <label class="inline-block text-gray-900 ps-2" for="fireMarshall"
@@ -217,7 +276,7 @@ const submitForm = () => {
               type="checkbox"
               id="drivingLicense"
               value="Driving License"
-              v-model="formData.qualifications"
+              v-model="formData.drivingLicense"
               class="accent-green-500"
             />
             <label class="inline-block text-gray-900 ps-2" for="drivingLicense"
