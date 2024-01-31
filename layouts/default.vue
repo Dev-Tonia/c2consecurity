@@ -17,7 +17,7 @@
     <slot />
   </main>
   <footer class="pt-10">
-    <div class="text-white pb-9 bg-[#221F20]">
+    <div class="text-white pb-9 bg-[#221F20] pt-10">
       <div class="wrapper">
         <div class="md:grid grid-cols-4 gap-4">
           <div class="md:col-span-2">
@@ -73,7 +73,7 @@
               <h1 class="font-bold text-2xl mb-3 md:mb-6">Contact Details</h1>
               <div class="mb-2">
                 <h5 class="font-bold">Head Office</h5>
-                <p class="text-xs">3 Nassau path London SE2886RR</p>
+                <p class="text-xs">3 Nassau path London SE288AN</p>
               </div>
               <div class="text-xs mb-2">
                 <span class="font-bold">Tel:</span>
@@ -95,7 +95,7 @@
                   target="_blank"
                   class="break-words"
                 >
-                  Support@c2constructionsecurityservicesltd.com
+                  Support@c2constructionsecurityservicesltd.co.uk
                 </a>
               </div>
             </div>

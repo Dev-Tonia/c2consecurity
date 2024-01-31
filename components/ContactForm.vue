@@ -38,7 +38,6 @@ const submit = async () => {
       phone: formData.phoneNumber,
       info: formData.additionalInfo,
     });
-    console.log(data.value);
   }
   formData.firstName = "";
   formData.lastName = "";
