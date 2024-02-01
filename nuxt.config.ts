@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         {
           hid: "og-image",
           property: "og:image",
-          content: "./assets/img/wildcard.png",
+          content: "/wildcard.png",
         },
         {
           hid: "og-url",
@@ -55,12 +55,7 @@ export default defineNuxtConfig({
           property: "keywords",
           content:
             "security guarding - all sector, Nassau, London , manned guards, Uk, United Kingdom, security, uniformed, key-holding, Id card systems , biometric access control , Electronic Security & surveillance Systems, event management",
-        } /* 
-        <link rel="alternate" href="https://www.security-asa.com/blog-feed.xml" type="application/rss+xml" title="asawebsite - RSS"/>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="ASA Security Nigeria- Security as it should be!"/>
-        <meta name="twitter:description" content="ASA SECURITY is a leading Nigerian company which offers a wide range of comprehensive security solutions for the private, commercial and governmet sectors."/>
-      */,
+        },
 
         { hid: "t-type", name: "twitter:card", content: "summary_large_image" },
         {
