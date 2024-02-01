@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ["@nuxtjs/sitemap"],
   devtools: { enabled: true },
+  sitemap: {
+    hostname: "https://www.c2constructionsecurityservicesltd.co.uk/",
+    // options
+  },
+
   app: {
     head: {
       title:
