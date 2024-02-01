@@ -62,7 +62,12 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  title:
+    "Contact us || C2construction Security Services - EXPERIENCE SECURITY LIKE NEVER BEFORE!",
+});
+</script>
 
 <style scoped>
 .map {

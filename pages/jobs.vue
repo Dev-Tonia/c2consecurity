@@ -33,6 +33,11 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  title:
+    "Jobs || C2construction Security Services - EXPERIENCE SECURITY LIKE NEVER BEFORE!",
+});
+</script>
 
 <style scoped></style>

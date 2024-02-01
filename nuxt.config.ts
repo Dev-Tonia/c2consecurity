@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title:
-        "Home ||C2construction Security Services - EXPERIENCE SECURITY LIKE NEVER BEFORE!",
+        "Home || C2construction Security Services - EXPERIENCE SECURITY LIKE NEVER BEFORE!",
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },

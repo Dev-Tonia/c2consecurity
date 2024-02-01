@@ -25,6 +25,10 @@
 </template>
 
 <script setup>
+useHead({
+  title:
+    " Services|| C2construction Security Services - EXPERIENCE SECURITY LIKE NEVER BEFORE!",
+});
 const services = [
   {
     img: "/img/sec-serv.jpg",
