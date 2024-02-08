@@ -1,15 +1,14 @@
 export default function () {
-  const data = ref(null);
+  const result = ref(null);
 
   const url = "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/";
   const submitForm = async (param, bodyData) => {
-    const res = await useFetch(`${url}${param}`, {
+    const { data } = await useFetch(`${url}${param}`, {
       method: "post",
       body: bodyData,
     });
-
-    data.value = res.value;
+    result.value = data._value;
   };
 
-  return { data, submitForm };
+  return { result, submitForm };
 }

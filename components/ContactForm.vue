@@ -23,12 +23,16 @@ const rules = computed(() => {
 });
 
 const v$ = useVuelidate(rules, formData);
-const { data, submitForm } = useFetchCustom();
-
+const { result, submitForm } = useFetchCustom();
+const isOpen = ref(false);
+const modalMsg = ref("");
+const error = ref(false);
 const submit = async () => {
   v$.value.$validate();
   if (v$.value.$error) {
-    console.log("error occurred");
+    isOpen.value = true;
+    error.value = true;
+    modalMsg.value = "Error Occurred \nAll the input field are required.";
     return;
   } else {
     submitForm("contact", {
@@ -38,13 +42,20 @@ const submit = async () => {
       phone: formData.phoneNumber,
       info: formData.additionalInfo,
     });
+    error.value = false;
+    isOpen.value = true;
+    modalMsg.value = "Thank you for contacting C2construction Service Limited.";
   }
+
   formData.firstName = "";
   formData.lastName = "";
   formData.email = "";
   formData.phoneNumber = "";
   formData.additionalInfo = "";
 };
+function closeModal() {
+  isOpen.value = false;
+}
 </script>
 <template>
   <form
@@ -113,7 +124,10 @@ const submit = async () => {
       Submit
     </button>
   </form>
-  <!-- <div class="bg-green-500">
-    {{ data }}
-  </div> -->
+  <Modal
+    :data="modalMsg"
+    @close-modal="closeModal"
+    v-if="isOpen"
+    :error="error"
+  />
 </template>

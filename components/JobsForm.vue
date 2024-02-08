@@ -21,7 +21,9 @@ const formData = reactive({
   qualifications: [],
   additionalInfo: "",
 });
-
+const isOpen = ref(false);
+const modalMsg = ref("");
+const error = ref(false);
 const rules = computed(() => {
   return {
     email: {
@@ -43,16 +45,13 @@ const rules = computed(() => {
   };
 });
 const v$ = useVuelidate(rules, formData);
-const { data, submitForm } = useFetchCustom();
-
-function capitalizeFirstLetter(value) {
-  return value.toString().charAt(0).toUpperCase() + value.toString().slice(1);
-}
-
+const { result, submitForm } = useFetchCustom();
 const submit = () => {
   v$.value.$validate();
   if (v$.value.$error) {
-    console.log("error occurred");
+    isOpen.value = true;
+    error.value = true;
+    modalMsg.value = "Error Occurred \nAll the input field are required.";
     return;
   } else {
     submitForm("services", {
@@ -82,6 +81,9 @@ const submit = () => {
       zipCode: formData.zipCode,
       additionalInfo: formData.additionalInfo,
     });
+    error.value = false;
+    isOpen.value = true;
+    modalMsg.value = "Your application was successful.";
   }
   formData.email = "";
   formData.firstName = "";
@@ -97,6 +99,9 @@ const submit = () => {
   formData.qualifications = [];
   formData.additionalInfo = "";
 };
+function closeModal() {
+  isOpen.value = false;
+}
 </script>
 
 <template>
@@ -301,4 +306,10 @@ const submit = () => {
       </form>
     </div>
   </section>
+  <Modal
+    :data="modalMsg"
+    @close-modal="closeModal"
+    v-if="isOpen"
+    :error="error"
+  />
 </template>

@@ -1,6 +1,6 @@
 <template>
   <Banner title="Contact Us" />
-
+  {{ data }}
   <section class="py-10">
     <div class="wrapper">
       <div class="flex flex-col md:flex-row gap-4">
@@ -17,7 +17,7 @@
           </div>
           <div class="mb-2">
             <h5 class="font-bold md:text-lg">Head Office</h5>
-            <p class="">3 Nassau path London SE288AN</p>
+            <p class="">{{ data[0].address }}</p>
           </div>
           <div class="mb-2">
             <h5 class="font-bold md:text-lg">Call Now!</h5>
@@ -25,11 +25,11 @@
               We are available 24/7, every day of the year.
               <span class="text-green-500 font-medium text-lg">
                 <a
-                  href="tel:+7783863657"
+                  :href="`tel:${data[0].phone}`"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  +447948508175</a
+                  {{ data[0].phone }}</a
                 >
               </span>
             </p>
@@ -67,6 +67,9 @@ useHead({
   title:
     "Contact us || C2construction Security Services - EXPERIENCE SECURITY LIKE NEVER BEFORE!",
 });
+const { data } = await useFetch(
+  "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
+);
 </script>
 
 <style scoped>
