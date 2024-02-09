@@ -118,14 +118,17 @@ const tel = ref("");
 const addr = ref("");
 
 async function fetchData() {
-  const { data } = await useFetch(
+  const { data, refresh } = await useFetch(
     "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
   );
   const [{ phone, address }] = data.value;
   tel.value = phone;
   addr.value = address;
+  refresh();
 }
-fetchData();
+onBeforeMount(() => {
+  fetchData();
+});
 </script>
 
 <style scoped></style>

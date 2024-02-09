@@ -1,5 +1,7 @@
 <template>
   <Banner title="Contact Us" />
+  <!-- <p>{{ tel }}</p> -->
+  <!-- <p>{{ addr }}</p> -->
   <section class="py-10">
     <div class="wrapper">
       <div class="flex flex-col md:flex-row gap-4">
@@ -70,24 +72,20 @@ const tel = ref("");
 const addr = ref("");
 // const data = ref("");
 
-function fetchData() {
-  const { data } = useFetch(
-    "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data",
-    {
-      server: false,
-    }
+async function fetchData() {
+  const { data, refresh } = await useFetch(
+    "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
   );
   const [{ phone, address }] = data.value;
   tel.value = phone;
   addr.value = address;
-  // console.log(data.value);
+  console.log(data.value);
+  refresh();
 }
-// onBeforeMount(async () => {
-//   await fetchData();
-//   console.log(tel.value);
-//   console.log(addr.value);
-// });
-fetchData();
+
+onBeforeMount(() => {
+  fetchData();
+});
 </script>
 
 <style scoped>
