@@ -73,24 +73,23 @@
               <h1 class="font-bold text-2xl mb-3 md:mb-6">Contact Details</h1>
               <div class="mb-2">
                 <h5 class="font-bold">Head Office</h5>
-                <p class="text-xs">{{ data[0].address }}</p>
+                <p class="text-xs">{{ addr }}</p>
               </div>
               <div class="text-xs mb-2">
                 <span class="font-bold">Tel:</span>
                 <a
-                  :href="`tel:${data[0].phone}`"
+                  :href="`tel:${tel}`"
                   rel="noreferrer noopener"
                   target="_blank"
                 >
-                  {{ data[0].phone }}</a
+                  {{ tel }}</a
                 >
               </div>
 
               <div class="text-xs mb-2">
                 <span class="font-bold">Email:</span>
                 <a
-                  href="mailto: 
-              Support@c2constructionsecurityservicesltd.com"
+                  href="mailto:Support@c2constructionsecurityservicesltd.co.uk"
                   rel="noreferrer noopener"
                   target="_blank"
                   class="break-words"
@@ -115,9 +114,18 @@ function toggleNavbar() {
   isNavbarOpen.value = !isNavbarOpen.value;
 }
 
-const { data } = await useFetch(
-  "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
-);
+const tel = ref("");
+const addr = ref("");
+
+async function fetchData() {
+  const { data } = await useFetch(
+    "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
+  );
+  const [{ phone, address }] = data.value;
+  tel.value = phone;
+  addr.value = address;
+}
+fetchData();
 </script>
 
 <style scoped></style>
