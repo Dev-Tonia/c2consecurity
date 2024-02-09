@@ -70,8 +70,8 @@ const tel = ref("");
 const addr = ref("");
 // const data = ref("");
 
-async function fetchData() {
-  const { data } = await useFetch(
+function fetchData() {
+  const { data } = useFetch(
     "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data",
     {
       server: false,
