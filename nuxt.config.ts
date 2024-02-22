@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/sitemap"],
   devtools: { enabled: true },
   sitemap: {
-    hostname: "https://www.c2constructionsecurityservicesltd.co.uk/",
+    hostname: "https://www.c2constructionsecurityservices.co.uk/",
     // options
   },
 
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
           hid: "description",
           name: "description",
           content:
-            "C2construction Security Services Limited offers a diverse range of customized security services that go beyond mere protection, aiming to instill peace of mind and assurance in various sectors including residential, commercial, construction, and public domains. Our commitment to delivering unparalleled customer service is reflected in the exceptional quality of our staff, all of whom hold approvals from the Security Industry Authority (SIA).",
+            "C2construction Security Services  offers a diverse range of customized security services that go beyond mere protection, aiming to instill peace of mind and assurance in various sectors including residential, commercial, construction, and public domains. Our commitment to delivering unparalleled customer service is reflected in the exceptional quality of our staff, all of whom hold approvals from the Security Industry Authority (SIA).",
         },
         {
           hid: "og-image",
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         {
           hid: "og-url",
           property: "og:url",
-          content: "https://www.c2constructionsecurityservicesltd.co.uk/",
+          content: "https://www.c2constructionsecurityservices.co.uk/",
         },
         {
           hid: "og-site_name",
@@ -74,7 +74,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "canonical",
-          href: "https://www.c2constructionsecurityservicesltd.co.uk/",
+          href: "https://www.c2constructionsecurityservices.co.uk/",
         },
         {
           rel: "stylesheet",

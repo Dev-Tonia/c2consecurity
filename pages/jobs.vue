@@ -15,11 +15,11 @@
         <em class="font-medium"
           ><a
             href="mailto: 
-              Support@c2constructionsecurityservicesltd.com"
+              Support@c2constructionsecurityservices.co.uk"
             rel="noreferrer noopener"
             target="_blank"
           >
-            Support@c2constructionsecurityservicesltd.com
+            Support@c2constructionsecurityservices.co.uk
           </a>
         </em>
         or fill in the enquiry form below.

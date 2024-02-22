@@ -11,9 +11,8 @@
               Get In Touch With us
             </h2>
             <p class="text-lg md:text-xl font-medium">
-              At C2construction security service limited, we work around the
-              clock to ensure that our clients feel safe and secure. 24/7 we'll
-              be ready.
+              At C2construction security service, we work around the clock to
+              ensure that our clients feel safe and secure. 24/7 we'll be ready.
             </p>
           </div>
           <div class="mb-2">
@@ -72,19 +71,21 @@ const tel = ref("");
 const addr = ref("");
 // const data = ref("");
 
-async function fetchData() {
-  const { data, refresh } = await useFetch(
-    "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
+onMounted(async () => {
+  await nextTick();
+
+  const {
+    data,
+    pending: pend,
+    error,
+    refresh,
+  } = await useFetch(
+    "https://chimelu.c2constructionsecurityservices.co.uk/api/data"
   );
   const [{ phone, address }] = data.value;
   tel.value = phone;
   addr.value = address;
-  console.log(data.value);
-  refresh();
-}
-
-onBeforeMount(() => {
-  fetchData();
+  // users.value = data.value;
 });
 </script>
 

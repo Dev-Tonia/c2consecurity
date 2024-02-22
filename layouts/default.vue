@@ -89,12 +89,12 @@
               <div class="text-xs mb-2">
                 <span class="font-bold">Email:</span>
                 <a
-                  href="mailto:Support@c2constructionsecurityservicesltd.co.uk"
+                  href="mailto:support@c2constructionsecurityservices.co.uk"
                   rel="noreferrer noopener"
                   target="_blank"
                   class="break-words"
                 >
-                  Support@c2constructionsecurityservicesltd.co.uk
+                  Support@c2constructionsecurityservices.co.uk
                 </a>
               </div>
             </div>
@@ -116,19 +116,23 @@ function toggleNavbar() {
 
 const tel = ref("");
 const addr = ref("");
+onMounted(async () => {
+  await nextTick();
 
-async function fetchData() {
-  const { data, refresh } = await useFetch(
-    "https://chimelu.c2constructionsecurityservicesltd.co.uk/api/data"
+  const {
+    data,
+    pending: pend,
+    error,
+    refresh,
+  } = await useFetch(
+    "https://chimelu.c2constructionsecurityservices.co.uk/api/data"
   );
   const [{ phone, address }] = data.value;
   tel.value = phone;
   addr.value = address;
-  refresh();
-}
-onBeforeMount(() => {
-  fetchData();
+  // users.value = data.value;
 });
+// 3 Nassau path London SE288AN
 </script>
 
 <style scoped></style>

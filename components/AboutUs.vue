@@ -8,7 +8,7 @@
         class="mt-3 mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-justify"
       >
         <span class="text-green-500 font-medium text-xl">
-          C2construction Security Services Limited</span
+          C2construction Security Services</span
         >
         offers a diverse range of customized security services that go beyond
         mere protection, aiming to instill peace of mind and assurance in
@@ -23,7 +23,7 @@
         Situated in the central hub of Surrey, our main office serves as the
         cornerstone of
         <span class="text-green-500 font-medium text-xl">
-          C2construction Security Services Limited</span
+          C2construction Security Services</span
         >. With Control Centres strategically positioned across 80% of the UK,
         we are well-equipped to fulfill all your security needs. Our clients
         prioritize value for money and a dependable team, and we consistently

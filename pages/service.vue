@@ -33,7 +33,7 @@ const services = [
   {
     img: "/img/sec-serv.jpg",
     title: "SECURITY GUARDING - ALL SECTORS",
-    body: "At C2construction Security Services Limited we deliver high-quality security guard services throughout a range of industries, whether it be for offices, schools, construction sites or events. Primarily we provide our security guard services across Surrey and the surrounding counties, but have a good nationwide network. Our security guards have worked to evict squatters, patrol residential areas, and install security equipment ie electronic clocking, providing you with a quality assured record each week of our Security Guards’ patrol duties, whilst on Site.",
+    body: "At C2construction Security Services we deliver high-quality security guard services throughout a range of industries, whether it be for offices, schools, construction sites or events. Primarily we provide our security guard services across Surrey and the surrounding counties, but have a good nationwide network. Our security guards have worked to evict squatters, patrol residential areas, and install security equipment ie electronic clocking, providing you with a quality assured record each week of our Security Guards’ patrol duties, whilst on Site.",
   },
   {
     img: "/img/access-control.png",
